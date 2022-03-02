@@ -1,0 +1,34 @@
+/* utils */
+
+/* generics */
+
+/* header */
+
+header {
+  background-color: #2e3a46;
+  height: 70px;
+  padding: 10px;
+}
+
+header a {
+  display: block;
+}
+
+#logo {
+  height: 50px;
+}
+
+body {
+  background-color: #1e2d3b;
+  color: white;
+}
+
+main {
+  margin-top: 30px;
+}
+
+.card {
+  background-color: #2e3a46;
+  gap: 15px;
+  height: 400px;
+}

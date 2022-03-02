@@ -1,5 +1,7 @@
 <?php
 
+$search = strtolower($_GET['search']) ?? '';
+
 $database = [
     [
         'title' => 'New Jersey',
@@ -45,6 +47,19 @@ $database = [
     ]
 ];
 
+$results = $database;
+
+if (!empty($search)) {
+    $results = [];
+    foreach ($database as $album) {
+        $genre = strtolower($album['genre']);
+        if (strpos($genre, $search) !== false) {
+            $results[] = $album;
+        }
+    }
+}
+
+
 header('Content-type: application/json');
 
-echo json_encode($database);
+echo json_encode($results);
